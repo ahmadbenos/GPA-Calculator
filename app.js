@@ -159,14 +159,14 @@ function addCourse() {
 calculate.addEventListener("click", calculateGpa);
 
 function calculateGpa() {
-  const lmao = document.querySelectorAll(".namo");
+  const allCourseNames = document.querySelectorAll(".namo");
   const list = document.getElementById("listNames");
 
   gpaBlock.style.display = "block";
   list.innerHTML = "";
   var totalGPA;
 
-  lmao.forEach((course, index, arr) => {
+  allCourseNames.forEach((course, index, arr) => {
     let item = course.value;
     let itemGrade =
       course.parentElement.parentElement.childNodes[5].childNodes[1].value;
@@ -182,26 +182,19 @@ function calculateGpa() {
     }
     list.appendChild(newItem);
   });
-  // console.log(
-  //   lmao[5].parentElement.parentElement.childNodes[5].childNodes[1].value
-  // );
+  
 
   if (list.innerText === "") {
     list.style.lineHeight = "22px";
     list.innerHTML =
       "this section displays your courses name with their GPA. You didn't add a name to any of your courses. <u>Fill in the course name input box to view your courses here.</u>";
   }
-  // console.log(grades[1].value);
-  /*console.log(
-    grades[1].parentElement.parentElement.childNodes[3].childNodes[1].value
-  );*/
+  
   const credit = document.querySelectorAll(".credito");
   const grades = document.querySelectorAll(".grades");
 
   let newGrades = Array.from(grades);
-  /*console.log(
-    newGrades[5].parentElement.parentElement.childNodes[3].childNodes[1].value //childNodes[3].childNodes[1].value
-  );*/
+  
   var allGpa = newGrades.map((grade, index, arr) => {
     let creditInput = Number(
       grade.parentElement.parentElement.childNodes[3].childNodes[1].value
