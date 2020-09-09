@@ -1,6 +1,6 @@
 # GPA-Calculator
 Live Demo: https://baugpa.netlify.app
-<h2> Grading system refereance: </h2>
+<h2> Grading system referance: </h2>
 
 https://www.bau.edu.lb/Undergraduate/Grading-System
 
